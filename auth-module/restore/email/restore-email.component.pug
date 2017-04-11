@@ -1,0 +1,18 @@
+form((ngSubmit)="sendEmail()", [formGroup]="restoreEmailForm", novalidate, autocomplete='off')
+  h3.text-center Enter your email
+  p.text-center We will send you letter with instructions
+  .form-group(
+    control-validation,
+    [rules]="emailValidators",
+    [control]="restoreEmailForm.get('userEmail')"
+  )
+    label.control-label(for="email-id") Email
+    input.form-control#email-id(
+      #controlElement,
+      type="text",
+      placeholder="Email",
+      formControlName="userEmail"
+    )
+  .form-group
+    button.btn.btn-success([disabled]="restoreEmailForm.invalid")
+      | Send

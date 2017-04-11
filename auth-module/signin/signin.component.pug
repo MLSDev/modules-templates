@@ -1,0 +1,29 @@
+form((ngSubmit)="signIn()", [formGroup]="signInForm", novalidate, autocomplete='off')
+  h3.text-center Sign in
+  .form-group(
+    control-validation,
+    [rules]="emailValidators",
+    [control]="signInForm.get('userEmail')"
+  )
+    label.control-label(for="email-id") Email
+    input.form-control#email-id(
+      #controlElement,
+      type="text",
+      placeholder="Email",
+      formControlName="userEmail"
+    )
+  .form-group(
+    control-validation,
+    [rules]="passwordValidators",
+    [control]="signInForm.get('userPassword')"
+  )
+    label.control-label(for="password") Password
+    input.form-control#password(
+      #controlElement,
+      type="password",
+      placeholder="Password",
+      formControlName="userPassword"
+    )
+  .form-group
+    button.btn.btn-success([disabled]="signInForm.invalid")
+      |Sign In
