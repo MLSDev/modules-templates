@@ -12,9 +12,9 @@ import { validationMessages } from '../common/validation-messages';
 })
 export class SignUpComponent implements OnInit {
   public signUpForm: FormGroup;
-  public nameValidators: Object;
-  public emailValidators: Object;
-  public passwordValidators: Object;
+  public nameValidators: any;
+  public emailValidators: any;
+  public passwordValidators: any;
 
   constructor(
     private fb: FormBuilder,

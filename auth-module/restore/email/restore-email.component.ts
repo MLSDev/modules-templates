@@ -10,7 +10,7 @@ import { validationMessages } from '../../common/validation-messages';
 })
 export class RestoreEmailComponent implements OnInit {
   public restoreEmailForm: FormGroup;
-  public emailValidators: Object;
+  public emailValidators: any;
 
   constructor(
     private fb: FormBuilder,

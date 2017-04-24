@@ -20,7 +20,7 @@ describe('RestorePasswordComponent', () => {
       comp.ngOnInit();
     });
     it('should set restorePasswordForm equal to FormBuilder.group call result', () => {
-      expect(<Object> comp.restorePasswordForm).toEqual(formGroupCallResult);
+      expect(comp.restorePasswordForm as any).toEqual(formGroupCallResult);
     });
     it('should set error messages list for every field validator', () => {
       comp.passwordValidators = validationMessages['userPassword'];

@@ -12,7 +12,6 @@ import { FormControl } from '@angular/forms';
   selector: '[control-validation]',
   template: `
     <ng-content></ng-content>
-    
     <div class="validation-message"
          [hidden]="!message"
          [innerHtml]="message"
@@ -21,7 +20,7 @@ import { FormControl } from '@angular/forms';
 })
 export class ControlValidationComponent implements AfterViewInit, OnDestroy {
   @ContentChild('controlElement') private inputElm: ElementRef;
-  @Input() private rules: Object;
+  @Input() private rules: any;
   @Input() private control: FormControl;
   @Input() private timing: number = 500;
   private message: string = '';

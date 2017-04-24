@@ -11,8 +11,8 @@ import { validationMessages } from '../common/validation-messages';
 })
 export class SignInComponent implements OnInit {
   public signInForm: FormGroup;
-  public emailValidators: Object;
-  public passwordValidators: Object;
+  public emailValidators: any;
+  public passwordValidators: any;
 
   constructor(
     private fb: FormBuilder,

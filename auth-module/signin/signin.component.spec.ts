@@ -21,7 +21,7 @@ describe('SignInComponent', () => {
       comp.ngOnInit();
     });
     it('should set signInForm equal to FormBuilder.group call result', () => {
-      expect(<Object> comp.signInForm).toEqual(formGroupCallResult);
+      expect(comp.signInForm as any).toEqual(formGroupCallResult);
     });
     it('should set error messages list for every field validator', () => {
       comp.emailValidators = validationMessages['userEmail'];

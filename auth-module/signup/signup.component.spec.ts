@@ -21,7 +21,7 @@ describe('SignUpComponent', () => {
       comp.ngOnInit();
     });
     it('should set signUpForm equal to FormBuilder.group call result', () => {
-      expect(<Object> comp.signUpForm).toEqual(formGroupCallResult);
+      expect(comp.signUpForm as any).toEqual(formGroupCallResult);
     });
     it('should set error messages list for every field validator', () => {
       comp.nameValidators = validationMessages['userName'];

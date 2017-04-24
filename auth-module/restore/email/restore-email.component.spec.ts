@@ -20,7 +20,7 @@ describe('RestoreEmailComponent', () => {
       comp.ngOnInit();
     });
     it('should set restoreEmailForm equal to FormBuilder.group call result', () => {
-      expect(<Object> comp.restoreEmailForm).toEqual(formGroupCallResult);
+      expect(comp.restoreEmailForm as any).toEqual(formGroupCallResult);
     });
     it('should set error messages list for every field validator', () => {
       comp.emailValidators = validationMessages['userEmail'];

@@ -10,7 +10,7 @@ import { validationMessages } from '../../common/validation-messages';
 })
 export class RestorePasswordComponent {
   public restorePasswordForm: FormGroup;
-  public passwordValidators: Object;
+  public passwordValidators: any;
 
   constructor(
     private fb: FormBuilder,
